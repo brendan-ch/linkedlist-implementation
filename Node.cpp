@@ -4,13 +4,13 @@
 using namespace std;
 
 Node::Node(int initialData) {
-  std::cout << "Created node @ " << this << std::endl;
+  cout << "Creating Node @ " << this << endl;
   data = initialData;
   next = nullptr;
 }
 
 Node::~Node() {
-  std::cout << "Deleted node @ " << this << std::endl;
+  cout << "Deleting Node @ " << this << endl;
   delete next;  // runs the destructor on the next item
   // if the start is deleted, then the entire list should also be deleted
 }
