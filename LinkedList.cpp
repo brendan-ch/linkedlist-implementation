@@ -39,6 +39,8 @@ Node* LinkedList::get(int index) {
 }
 
 // Mutators
+
+// Create a new node with the given int and append it to the end of the list.
 void LinkedList::append(int n) {
   Node* newNode = new Node(n);
 
@@ -54,10 +56,17 @@ void LinkedList::append(int n) {
   length++;
 }
 
+// Insert the passed node at the end of the list.
 void LinkedList::append(Node* n) {
-
+  if (end != nullptr) {
+    end->setNext(n);
+  }
+  end = n;
+  length++;
 }
 
 Node* LinkedList::remove(int i) {
-
+  
+  
+  length--;
 }

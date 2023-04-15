@@ -24,7 +24,9 @@ int main() {
     list->append(arr[i]);
   }
 
-  cout << list->get(2)->getData() << endl;
+  cout << "Node @ index 2 contains " << list->get(2)->getData() << endl;
+  list->append(new Node(1023));
+  cout << "Node @ index 5 contains " << list->get(5)->getData() << endl;
 
   delete list;
   return 0;
