@@ -13,6 +13,10 @@ Node::~Node() {
   // if the start is deleted, then the entire list should also be deleted
 }
 
+int Node::getData() {
+  return data;
+}
+
 Node* Node::getNext() {
   return next;
 }
