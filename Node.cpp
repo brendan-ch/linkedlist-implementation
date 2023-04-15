@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Node.hpp"
 
+using namespace std;
+
 Node::Node(int initialData) {
   std::cout << "Created node @ " << this << std::endl;
   data = initialData;
