@@ -26,5 +26,6 @@ int main() {
 
   std::cout << list->get(2)->getData() << std::endl;
 
+  delete list;
   return 0;
 }
