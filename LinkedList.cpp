@@ -65,8 +65,37 @@ void LinkedList::append(Node* n) {
   length++;
 }
 
-Node* LinkedList::remove(int i) {
+Node* LinkedList::remove(int index) {
+  if (index >= length) {
+    throw std::out_of_range("Index out of range");
+  }
+
+  // Track previous, current, and next nodes
+  Node* previous = nullptr;
+  Node* current = start;
+  Node* next = start->getNext();
   
-  
+  // Starting at index 0, iterate through current
+  for (int i = 0; i < index; i++) {
+    // Shift positions
+    previous = current;
+    current = next;
+    next = next->getNext();
+  }
+
+  // Re-link previous to next
+  if (previous != nullptr) {
+    previous->setNext(next);
+  } else {  // i.e. if at beginning of list
+    start = current->getNext();
+  }
+
+
+  if (current != nullptr) {
+    current->setNext(nullptr);
+  }
+
   length--;
+
+  return current;
 }

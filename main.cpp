@@ -28,6 +28,9 @@ int main() {
   list->append(new Node(1023));
   cout << "Node @ index 5 contains " << list->get(5)->getData() << endl;
 
+  Node* removed = list->remove(5);
+  delete removed;
+
   delete list;
   return 0;
 }
