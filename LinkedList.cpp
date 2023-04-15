@@ -1,15 +1,17 @@
+#include <iostream>
 #include <stdexcept>
 #include "LinkedList.hpp"
 
-using namespace std;
-
 LinkedList::LinkedList() {
+  cout << "Creating LinkedList @ " << this << endl;
+
   start = nullptr;
   end = nullptr;
   length = 0;
 }
 
 LinkedList::~LinkedList() {
+  cout << "Deleting LinkedList @ " << this << endl;
   delete start;  // cause nodes to recursively delete themselves
 }
 
