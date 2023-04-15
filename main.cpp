@@ -24,7 +24,7 @@ int main() {
     list->append(arr[i]);
   }
 
-  std::cout << list->get(2)->getData() << std::endl;
+  cout << list->get(2)->getData() << endl;
 
   delete list;
   return 0;
