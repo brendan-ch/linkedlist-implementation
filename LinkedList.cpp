@@ -38,7 +38,17 @@ Node* LinkedList::get(int index) {
 
 // Mutators
 void LinkedList::append(int n) {
+  Node* newNode = new Node(n);
 
+  if (end != nullptr) {
+    end->setNext(newNode);
+  }
+
+  if (start == nullptr) {
+    start = newNode;
+  }
+
+  end = newNode;
 }
 
 void LinkedList::append(Node* n) {
