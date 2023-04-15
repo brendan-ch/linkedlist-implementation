@@ -6,7 +6,7 @@ using namespace std;
 
 class LinkedList {
   Node* start;
-  Node* end;  // for performance (TM)
+  Node* end;
   int length;
 
 public:
@@ -14,18 +14,20 @@ public:
   ~LinkedList();
 
   // Accessors
+
+  // Get the starting node
   Node* getStart();
+
+  // Get the length of the linked list
   int getLength();
 
-  Node* get(int index);  // return node @ index
+  Node* get(int index);  // Return node @ the given index
 
   // Mutators
-  void append(int n);  // create a new node
+  void append(int n);  // Create a new node
   void append(Node* n);
 
-  // unlink a node @ given index from previous node,
-  // and unlink next node from removed node
-  // does not delete the node, but returns the removed node
-  // so the caller can delete it manually
+  // Unlink the node at the given index from the rest of the linked list,
+  // and return the orphaned node.
   Node* remove(int index);  // return the removed node
 };
