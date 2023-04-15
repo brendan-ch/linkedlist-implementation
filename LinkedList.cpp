@@ -49,6 +49,7 @@ void LinkedList::append(int n) {
   }
 
   end = newNode;
+  length++;
 }
 
 void LinkedList::append(Node* n) {
