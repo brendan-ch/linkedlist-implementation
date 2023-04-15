@@ -1,3 +1,7 @@
+#pragma once
+
+using namespace std;
+
 class Node {
   int data;
   Node* next;
