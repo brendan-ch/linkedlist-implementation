@@ -29,6 +29,10 @@ int main() {
   cout << "Node @ index 5 contains " << list->get(5)->getData() << endl;
 
   Node* removed = list->remove(5);
+  
+  // cout << removed << endl;  // value of the pointer = memory address of Node object
+  // cout << &removed << endl;  // memory address of `removed` variable
+
   delete removed;
 
   delete list;
